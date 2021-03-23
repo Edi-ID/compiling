@@ -54,10 +54,10 @@ def Testing():
 		file_python=input('\033[34m=\033[33;1m>\033[0;1m: ')
 		print ('\033[0;1m[\033[31m?\033[0;1m]\033[32m Number of compiles\033[0;1m:')
 		amount=int(input('\033[34m=\033[33;1m>\033[0;1m: '))
-		if amount > 10:
-			click.pause('\033[32mYou enter a number more than \033[0;1m10, \033[32mthis can cause the file size to be slow \033[31mENTER\033[0;1m')
+		if amount > 25:
+			click.pause('\033[32mYou enter a number more than \033[0;1m25, \033[32mthis can cause the file size to be slow \033[31mENTER\033[0;1m: \033[0;1m')
 		Compiles(file_python,amount)
-		choose=input('\033[0;1m[\033[31m?\033[0;1m]\033[32m Compile to bytes code pyc \033[32m(\033[32my\033[0;1m/\033[32mt)\033[0;1m: ')
+		choose=input('\033[0;1m[\033[31m?\033[0;1m]\033[32m Compile to bytes code pyc \033[32m(\033[32my\033[0;1m/\033[32mt)\033[0;1m: \033[33;1m')
 		if choose.lower() == 'y':
 			main.compile_file(file_python.replace('.py','_testing.py'))
 			print ('\033[33;1m-\033[0;1m'*21)
@@ -71,7 +71,7 @@ def Testing():
 		print (top + ' \033[31mStopped\033[0;1m')
 		print ('')
 	except Exception as F:
-		print(f'[Error] {str(F)}')
+		print(f'\033[0;1m[\033[31m!\033[0;1m]\033[31m Error BRO\033[0;1m {str(F)}')
 
 def ex():
 	print ('')
